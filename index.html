@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+   <html lang="en">
+   <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+     <style>
+      *{
+    margin: 0%;
+    padding: 0;
+}
+.wrapper{
+    background-image: url(loveimg-2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+   
+    
+    
+}
+.fa-solid{
+   font-size: 1000%;
+    color: red;
+    margin-left: 100px;
+   
+}
+
+.task{
+    height: 350px;
+    width: 380px;
+    margin-left: 500px;
+    box-shadow: 0px 0px 20px 5px white;
+    position: relative;
+    margin-top: 100px;
+    border-radius: 20px;
+   
+    
+    
+}
+h2{
+    color:  white;
+    margin-left: 32px;
+    text-shadow: 5px 4px 4px black;
+    font-weight: bold;
+    
+   
+}
+.btn-group{
+    padding: 1.2rem;
+    width: 100%;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+}
+button{
+   
+    width: 130px;
+    height: inherit;
+    font-size: 1.2em;
+    color: #fff;
+    font-weight: 600;
+    border-radius: 30px;
+    border: 2px solid #e1dce7;
+    outline: none;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, .3);
+  
+    
+}
+.yes-btn{
+    position: absolute;
+    left: 20px;
+    color: black; 
+
+}
+.no-btn{
+    color: black;
+    position: absolute;
+    right: 20px;
+}
+
+  @media(max-width:650px) {
+    .wrapper{
+     
+        height: 100vh;
+        background-repeat: no-repeat;
+        background-size: 100%  100vh;
+    }
+    .task{ 
+        margin-left: 70px;
+        width: 300px;
+        height: 350px;
+    }
+    
+    h2{
+      font-size: large;
+    }
+
+    
+    .yes-btn{
+      font-size: medium;
+      left: 10px;
+    
+  
+  }
+  .no-btn{
+      font-size: medium;
+      right: 10px;
+  }
+  .fa-solid{
+
+     margin-left: 70px;
+    
+ }
+ 
+}
+  
+     </style>
+   </head>
+   <body>
+      <div class="wrapper">
+         <div class="task">
+            <i class="fa-solid fa-heart"></i>
+            <h2 class="question"> Sorry😒 meri janu please 🙏<br>Agar apne maaf kiya to option &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; choose kro</h2>
+            <!-- <h2 class="question"> dgsfchjsgjhgcjsfhsgchdhcsdv ggjsdgjsgjfgsf bjgsjfgjsfsmfchoose kro</h2> -->
+         
+         <div class="btn-group">
+             <button class="yes-btn">Welcome</button>
+             <button class="no-btn">Get lost</button>
+         </div>
+     </div>
+     </div>
+    
+    <script>
+      const wrapper = document.querySelector('.wrapper');
+const question = document.querySelector('.question');
+const yesBtn = document.querySelector('.yes-btn');
+const noBtn = document.querySelector('.no-btn');
+const wrapperRect = wrapper.getBoundingClientRect();
+const noBtnRect = noBtn.getBoundingClientRect();
+yesBtn.addEventListener('click',() => {
+    question.innerHTML = "Happy birthday meri jaan se pyari gudiya ka let's party";
+});
+noBtn.addEventListener('mouseover', () => {
+    const i = Math.floor(Math.random() * (wrapperRect.width - noBtnRect.width)) + 1;
+    const j = Math.floor(Math.random() * (wrapperRect.height - noBtnRect.height)) + 1;
+    noBtn.style.left = i + 'px';
+    noBtn.style.top = j + 'px';
+    
+})
+
+    </script>
+
+   </body>
+   </html>
+    
